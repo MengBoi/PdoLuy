@@ -4,4 +4,14 @@
     <string name="convert">convert</string>
     <string name="spending_tracker">Spending Tracker</string>
     <string name="show_rate">Show Rate</string>
+    <string name="euro">Euro</string>
+    <string name="textfield_label" />
+    <string-array name="currencies">
+        <item>KHR</item>
+        <item>Euro</item>
+        <item>CYN</item>
+        <item>BAHT</item>
+    </string-array>
+    <string name="result">15.9</string>
+
 </resources>
