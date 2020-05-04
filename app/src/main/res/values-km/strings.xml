@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ផ្ដូរលុយ</string>
+    <string name="currency_convert">ផ្តូរអត្តាការប្រាក់</string>
+    <string name="convert">ផ្តូរ</string>
+    <string name="spending_tracker">កត់ត្រាការចំណាយ</string>
+    <string name="show_rate">បង្ហាញអត្តាផ្តូរប្រាក់</string>
+    <string name="euro">យូរ៉ូ</string>
+
+    <string-array name="currencies">
+        <item>ខ្មែរ</item>
+        <item>យូរ៉ូ</item>
+        <item>យ៉េន</item>
+        <item>បាត</item>
+    </string-array>
+    <string name="result">១៥.៩</string>
+
+</resources>
