@@ -9,6 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".About" />
+        <activity android:name=".Dashboard" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -16,9 +18,8 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".ConvertActivity"/>
-        <activity android:name=".ShowRateActivity"/>
-        <activity android:name=".SpendingTrackerActivity"/>
+        <activity android:name=".ShowRateActivity" />
+        <activity android:name=".SpendingTrackerActivity" />
     </application>
 
 </manifest>

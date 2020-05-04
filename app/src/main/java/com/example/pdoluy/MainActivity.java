@@ -1,14 +1,18 @@
 package com.example.pdoluy;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
 
@@ -26,15 +30,40 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter.setDropDownViewResource(R.layout.spinner_dropdown_layout);
         currencies_spinner2.setAdapter(adapter2);
         currencies_spinner2.setOnItemSelectedListener(this);
+// bottom nav
+        // init and assign value
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        //Set home selected
+        bottomNavigationView.setSelectedItemId(R.id.home);
+        //Perform ItemSelectedListener
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch (item.getItemId()){
+                    case R.id.dashboard:
+                        startActivity(new Intent(getApplicationContext(), Dashboard.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.about:
+                        startActivity(new Intent(getApplicationContext(), About.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.home:
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        overridePendingTransition(0,0);
+                        return true;
+
+                }
+                return false;
+            }
+        });
+
 
 
 
     }
 
-    public void onConvertActivityPress (View view) {
-        Intent intent = new Intent(this, ConvertActivity.class);
-        startActivity(intent);
-    }
+
     public void onShowRateActivityPress (View view) {
         Intent intent = new Intent(this, ShowRateActivity.class);
         startActivity(intent);
