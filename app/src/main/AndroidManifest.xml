@@ -20,6 +20,7 @@
         </activity>
         <activity android:name=".ShowRateActivity" />
         <activity android:name=".SpendingTrackerActivity" />
+        <activity android:name=".ChooseCurrencyActivity"/>
     </application>
 
 </manifest>

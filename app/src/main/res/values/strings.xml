@@ -14,5 +14,5 @@
         <item>BAHT</item>
     </string-array>
     <string name="result">15.9</string>
-
+    <string name="currency_two">KHR</string>
 </resources>
